@@ -1,0 +1,310 @@
+   html{
+        height: 100%
+    }
+    body{
+      height: 100%;
+    margin: 0;
+    border: 0;
+    overflow-x: hidden;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   background: linear-gradient(rgb(2, 240, 18), rgb(115, 3, 3));
+    }
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    background-color: aliceblue;
+color: black;
+border: solid 12px rgb(171, 57, 62);
+z-index: 3;
+margin-bottom: 100px;
+}
+.rotate:hover, .fondo:hover, .verde:hover, .gris:hover, .rosa:hover, 
+.violeta:hover, .negro:hover, .skew:hover{
+  position: relative;
+  z-index: 9999;
+}
+
+.contenedor{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:left ;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1px;
+  padding-top: 127px;
+
+}
+    .trans{
+      background-color: red;
+      width: 100px;
+      height: 40px;
+      margin:10px;
+      text-align: center;
+      color: aliceblue;
+      animation: mover 10s linear infinite;
+    }
+     .PIENSA{
+      background-color: red;
+      width: 100px;
+      height: 40px;
+      margin:20px;
+      text-align: center;
+      color: aliceblue;
+      animation: mover 10s linear infinite;}
+
+    @keyframes mover {
+      0% {
+        transform: translateX(0);
+      
+      }
+      25%{ background-color: blue;}
+      40%{
+        background-color: blueviolet;
+      }
+
+      100%
+       {transform: translateX(100vw);
+      
+      }
+    }
+
+.targetas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    place-items: center;
+}
+   
+.targetas div{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  border: 4px dashed rgb(255, 0, 174);
+     width:250px;
+    height: 250px;
+    border-radius: 15px;}
+ 
+    
+.rotate{
+    position: relative;
+     cursor: pointer;
+      transition: transform .3s ease;
+      background: linear-gradient(pink, purple);
+      color: whitesmoke;
+}
+.rotate:hover{
+  transform:  scale(1.2) rotate(360deg);
+   background-image: url(./Screenshot_20250411_062358_Photos.jpg);
+   background-size: cover;
+    background-position:center;
+    opacity: 1;
+}
+.rotate:hover .texro{
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.fondo{
+  position: relative;
+  background: linear-gradient(white, red);
+    cursor: pointer;
+
+
+}
+.scaletex:hover{
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.fondo:hover {
+  background-image: url(./20230328_190932.jpg);
+background-size: cover;
+background-position: center;
+  animation: latido 0.6s infinite;
+  opacity: 1;
+}
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+.transform{
+  position: relative;
+  background: linear-gradient(whitesmoke, blue);
+  cursor: pointer;
+  color: white;
+  transition: transform .6s ease-in-out;
+  opacity: 1;
+  z-index: 0;
+}
+.transform:hover .transtex{
+opacity: 0;
+transition: opacity .3s ease;
+}
+.transform:hover{
+  background-image: url(./Screenshot_20250414_180558_Photos.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transform: rotate(360deg);
+
+}
+.verde{
+  background: linear-gradient(whitesmoke, green);
+position: relative;
+cursor: pointer;
+transition: transform .3s ease ;
+opacity: 1;
+}
+.verde:hover span{
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.verde:hover{
+  background-image: url(./Screenshot_20250411_063016_Photos.jpg);
+  background-size: cover;
+  background-position: top;
+transform: translateX(50px) scale(1.4) ;
+  opacity: 2;
+}
+
+.gris{
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(white, black);
+transition: transform .3s ease-in-out;
+
+}
+.gris:hover span{
+  transition: opacity.3s ease;
+  opacity: 0;
+}
+.gris:hover{
+  background-image: url(./Screenshot_20250411_063102_Photos\ \(1\).jpg);
+  background-size: cover;
+  animation: latido .6s ease-in-out infinite;
+  background-position: center;
+  opacity: 1;
+  
+}
+
+.rosa{
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(white, rgb(227, 11, 191));
+  z-index: 2;
+}
+.rosa:hover{
+  background-image: url(./Screenshot_20250411_063320_Photos.jpg);
+  background-size: cover;
+  background-position: center;
+  transform: translatex(-50px) scale(1.5);
+  transition: transform .3s ease-in-out;
+}
+.rosa:hover span{
+  opacity: 0;
+  transition: opasity .3s ease-in-out;
+}
+.skew{
+  position: relative;
+  background: linear-gradient( white, yellow);
+  cursor: pointer;
+  z-index: 0;
+  transition: transform .3s ease;
+}
+.skew:hover{
+    transform: rotate(20deg) translateX(20px) scale(1.3);
+  background-image: url(./Screenshot_20250409_040713_WhatsApp.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.skew:hover span{
+  opacity: 0;
+  transition: opacity .3s ease;
+
+}
+.negro{
+  position: relative;
+  background: linear-gradient(rgb(235, 157, 157), rgb(97, 29, 29));
+  color: aliceblue;
+  transition: transform .3s ease;
+  cursor: pointer;
+}
+  .negro:hover{
+    background-image: url(./Screenshot_20250411_062639_Photos.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: latido .6s ease infinite;
+    
+  }
+  .negro:hover span{
+    opacity: 0;
+    transition: opacity .3s ease;
+
+  }
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+.violeta{
+position: relative;
+cursor: pointer;
+background: linear-gradient(rgb(234, 155, 202), rgb(82, 2, 82));
+transition: transform .3s ease;
+
+}
+.violeta:hover{
+  background-image: url(./Screenshot_20250411_062406_Photos.jpg);
+  background-position: center;
+  background-size: cover;
+transform: rotate(360deg) scale(1.5);
+
+}
+.violeta:hover span{
+
+  opacity: 0;
+  transition: opacity .3s ease;
+
+}
+span::first-letter{
+  font-weight: 500;
+  font-size: 50px;
+}
+span{
+  font-weight: 300;
+  font-size: 25px;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  width: 100%;
+  position: relative;  /* o quita esta línea */
+  bottom: 0;           /* no es necesario si no es fixed */
+ text-align: center;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .targetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .targetas {
+    grid-template-columns: 1fr;
+  }
+}
